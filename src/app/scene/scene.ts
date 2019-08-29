@@ -20,5 +20,14 @@ export class Scene {
     ref.nativeElement.appendChild(canvas);
 
     this.ctx = canvas.getContext('2d');
+    this.main();
+  }
+
+  update(): void { }
+
+  main() {
+    this.update();
+    requestAnimationFrame(this.main.bind(this));
+
   }
 }
