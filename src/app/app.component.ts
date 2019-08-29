@@ -1,3 +1,4 @@
+import { HealtComponent } from './ecs/components/health.component';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Perceptron } from './neural-net/neural-net';
 import { Scene } from './scene/scene';
@@ -18,5 +19,7 @@ export class AppComponent implements OnInit {
     const inputs: number[] = [-1, 0.5];
     const guess: number = perc.guess(inputs);
     console.log('guess', guess);
+    const health = new HealtComponent();
+    console.log(health)
   }
 }
